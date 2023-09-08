@@ -38,7 +38,7 @@ camera_auto_detect=1
 display_auto_detect=1
 
 # Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
+dtoverlay=vc4-kms-v3d-pi4,cma-384
 max_framebuffers=2
 
 # Don't have the firmware create an initial video= setting in cmdline.txt.
@@ -69,3 +69,9 @@ enable_uart=1
 # For the CM4 I/O board, USB is disabled by default. This enables it.
 dtoverlay=dwc2,dr_mode=host
 
+# From uConsole OS
+gpio=10=ip,np
+dtoverlay=devterm-pmu
+dtoverlay=devterm-panel-uc
+dtoverlay=devterm-misc
+dtoverlay=audremap,pins_12_13
