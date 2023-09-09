@@ -417,6 +417,27 @@ index 000000000000..d5da786dc445
 +	};
 +
 +};
+diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
+index b5dce7480cff..905a8fedf354 100644
+--- a/arch/arm64/configs/bcm2711_defconfig
++++ b/arch/arm64/configs/bcm2711_defconfig
+@@ -1811,2 +1811,15 @@
+ # CONFIG_UPROBE_EVENTS is not set
+
++CONFIG_I2C_BCM2835=y
++CONFIG_BACKLIGHT_OCP8178=m
++CONFIG_DRM_PANEL_CWD686=m
++CONFIG_DRM_PANEL_CWU50=m
++CONFIG_INPUT_AXP20X_PEK=y
++CONFIG_CHARGER_AXP20X=m
++CONFIG_BATTERY_AXP20X=m
++CONFIG_AXP20X_POWER=m
++CONFIG_TI_ADC081C=m
++CONFIG_MFD_AXP20X=y
++CONFIG_MFD_AXP20X_I2C=y
++CONFIG_REGULATOR_AXP20X=y
++CONFIG_AXP20X_ADC=m
+
 
 diff --git a/drivers/staging/vc04_services/bcm2835-audio/bcm2835.c b/drivers/staging/vc04_services/bcm2835-audio/bcm2835.c
 index 092ccbfd5243..571fd4afb35b 100644
